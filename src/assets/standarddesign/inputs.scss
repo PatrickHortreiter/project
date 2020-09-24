@@ -1,0 +1,130 @@
+@import 'colors';
+
+.st-inputeuro {
+    position: relative;    
+}
+.st-inputeuro>input {
+    font-size: 2.4rem;
+    height: 4.8rem;
+    padding-right: 2.4rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    caret-color: #009dff;
+}
+.st-inputeuro:after {
+    color:rgba(0,0,0,0.2);
+    position: absolute;
+    top:-1.3rem;
+    content:"€";
+    right: 0;
+    font-size: 2.4rem;
+    background: transparent;
+}
+.st-inputeuro>input[type=number] {
+    -moz-appearance: textfield;
+    text-align: right;
+    border-width: 0 0 2px;
+    border-color: rgba(0,0,0,0.2);
+}
+.st-inputeuro>input::-webkit-outer-spin-button,
+.st-inputeuro>input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.st-inputeuro>input:focus{
+    outline: none;
+    border-color: #009dff;    
+}
+.st-inputeuro>input:hover{
+    outline: none;
+    border-color: #009dff;    
+}
+//-------------
+//input percent
+//-------------
+.st-inputpercent {
+    position: relative;    
+}
+.st-inputpercent>input {
+    font-size: 2.4rem;
+    height: 4.8rem;    
+    padding-right: 2.4rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    caret-color: #009dff;
+}
+.st-inputpercent:after {
+    color:rgba(0,0,0,0.2);
+    position: absolute;
+    top:-1.3rem;
+    content:"%";
+    right: 0;
+    font-size: 2.4rem;
+    background: transparent;
+}
+.st-inputpercent>input[type=number] {
+    background-color: transparent;
+    -moz-appearance: textfield;
+    text-align: right;
+    border-width: 0 0 2px;
+    border-color: rgba(0,0,0,0.2);
+}
+.st-inputpercent>input::-webkit-outer-spin-button,
+.st-inputpercent>input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.st-inputpercent>input:focus{
+    outline: none;
+    border-color: #009dff;    
+}
+.st-inputpercent>input:hover{
+    outline: none;
+    border-color: #009dff;    
+}
+//-------------
+//input number
+//-------------
+.st-inputnumber {
+    position: relative;    
+}
+.st-inputnumber>input {
+    font-size: 2.4rem;
+    height: 4.8rem;    
+    // padding-right: 2.4rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    caret-color: #009dff;
+}
+// .st-inputnumber:after {
+//     color:rgba(0,0,0,0.2);
+//     position: absolute;
+//     top:-1.3rem;
+//     content:"%";
+//     right: 0;
+//     font-size: 2.4rem;
+//     background: transparent;
+// }
+.st-inputnumber>input[type=number] {
+    background-color: transparent;
+    -moz-appearance: textfield;
+    text-align: right;
+    border-width: 0 0 2px;
+    border-color: rgba(0,0,0,0.2);
+}
+.st-inputnumber>input::-webkit-outer-spin-button,
+.st-inputnumber>input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.st-inputnumber>input:focus{
+    outline: none;
+    border-color: #009dff;    
+}
+.st-inputnumber>input:hover{
+    outline: none;
+    border-color: #009dff;    
+}

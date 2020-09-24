@@ -21,6 +21,9 @@ export type ChartOptions = {
 })
 export class ChartsComponent implements OnInit {
 
+  money=500;
+  monedevelopment=[];
+  years=[];
   percentage=8.0;
   result;
 
@@ -30,16 +33,17 @@ export class ChartsComponent implements OnInit {
     this.chartOptions = {
       chart: {
         type: 'area',
-        // width: '420px',
-        fontFamily: 'Times New Roman, Times, serif',
-        // dropShadow: {
-        //   enabled: true,
-        //   color: "#000",
-        //   top: 18,
-        //   left: 7,
-        //   blur: 20,
-        //   opacity: 1
-        // },
+        width: '100%',
+        
+        fontFamily: 'Helvetica, Arial, sans-serif',
+        dropShadow: {
+          enabled: true,
+          color: "#000",
+          top: 18,
+          left: 7,
+          blur: 20,
+          opacity: .2
+        },
         toolbar: {
           show: false
         },
@@ -48,18 +52,18 @@ export class ChartsComponent implements OnInit {
         }
       },
       series: [{
-        name: 'sales',
-        data: [30,40,35,50,49,60,70,91,125]
+        name: 'Euro',
+        data: []
       }],
       xaxis: {
         title: {
           text: "Zeit in Jahre"
         },
-        categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+        categories: []
       },
       yaxis:{
         title:{
-          text:"Vermögen in Euro"
+          text:"Vermögen"
         }
       },
       fill:{
@@ -69,19 +73,19 @@ export class ChartsComponent implements OnInit {
         enabled: false
       },
       stroke: {
-        curve: 'smooth',
+        curve: 'straight',
         width: 3
       },
       colors: ['#000'],
-      tooltip: {
-        enabled: false
-      },
+      // tooltip: {
+      //   enabled: false
+      // },
       grid: {
         enabled: false,
         borderColor: "#e7e7e7",
         row: {
           colors: ["#f3f3f3", "transparent"],
-          opacity: 0.8
+          opacity: 0.2
         }
       }
       
@@ -94,6 +98,29 @@ export class ChartsComponent implements OnInit {
 
   calc(){
     this.result=72/this.percentage;
+  }
+
+  fillTable(){
+    this.monedevelopment=[];
+    this.years=[];
+    console.log("fill table")
+    this.result=this.money;
+    this.monedevelopment.push(this.result);
+    let i = 0;
+    this.years.push(i)
+    
+    while(this.result<(this.money*2)){
+      i=i+1;
+      this.years.push(i);
+      this.result=this.result+this.result*(this.percentage/100);
+      this.monedevelopment.push(this.result.toFixed());
+    }
+    
+    this.chartOptions.series=[{
+      data:this.monedevelopment
+    }] ;
+    this.chartOptions.
+    this.chartOptions.xaxis.categories = this.years;
   }
 
 }

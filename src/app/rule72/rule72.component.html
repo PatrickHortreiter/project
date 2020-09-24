@@ -1,0 +1,20 @@
+<div>
+    <div class="left">
+        <div class="counter">
+            72
+        </div>
+        <div class="fraction"></div>
+        <div class="denominator">
+        <span class="st-inputpercent input">
+            <input [(ngModel)]="percentage" (ngModelChange)="percentageChange()" type="number" min="0.1" max="100" step="0.1" name="commanumber"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="4"/>
+        </span>
+        </div>
+    </div>
+    <div class="center">=</div>
+    <div class="right">
+        <span class="st-inputnumber">
+            <input [(ngModel)]="years" (ngModelChange)="yearsChange()" type="number" min="0.1" max="100" step="0.1" name="commanumber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="4"/>
+            Jahre
+        </span>
+    </div>
+</div>

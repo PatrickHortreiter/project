@@ -5,12 +5,14 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { AppComponent } from './app.component';
 import { ChartsComponent } from './charts/charts.component';
+import { Rule72Component } from './rule72/rule72.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartsComponent
+    ChartsComponent,
+    Rule72Component
   ],
   imports: [
     BrowserModule,
